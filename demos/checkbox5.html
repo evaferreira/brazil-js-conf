@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Aria Attributes</title>
+	<meta name="author" content="Here goes your name, you beautiful code-maker">
+
+	<link href="demo.css" rel="stylesheet">
+	<script src="prefixfree.min.js"></script>
+	
+</head>
+<body>
+
+	
+	<section class="live demo slide example">
+			<textarea class="shape-snippet left col check2" spellcheck="false" tabindex="0">
+function toggleCheckbox(e) {
+    if (check.getAttribute("aria-checked") === "false") {
+        check.setAttribute("aria-checked", "true");
+    } else {
+        check.setAttribute("aria-checked", "false");
+    }
+}
+// aria-label = "This is a demo"
+			</textarea>
+			<div class="flota col">
+				<div class="checks">
+					<span role="checkbox" class="check check1 check2 check3" aria-checked="true" id="check" tabindex="1" aria-label="This is a demo"></span>
+				</div>
+			</div>
+	</section>
+
+	<script>
+		function toggleCheckbox(e) {
+			if (check.getAttribute("aria-checked") === "false") {
+				check.setAttribute("aria-checked", "true");
+			} else {
+				check.setAttribute("aria-checked", "false");
+			}
+        }
+		check.addEventListener(
+			"keydown",
+			function (ev){
+            	if (ev.keyCode == 32 || ev.keyCode == 13) {
+					toggleCheckbox(ev);
+				}
+			}
+		);
+
+		check.addEventListener(
+			"click",
+			function (ev){
+				toggleCheckbox(ev);
+			}
+		);
+	</script>
+
+
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/incrementable.js"></script>
+<script src="for-demos.js"></script>
+
+	
+</body>
+</html>

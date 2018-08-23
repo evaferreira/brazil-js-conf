@@ -1,0 +1,95 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: rebeccapurple;
+$linkColorHover: lighten( $linkColor, 10% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+.reveal h1 {
+	font-size: 2.5em;
+}
+
+.reveal h1.title{
+	text-transform: uppercase;
+}
+
+.special{
+	height: 60vh;
+}
+
+span.white{
+	color: #fff;
+}
+
+.weird-grey{
+	background-image: linear-gradient(90deg, gray 50%, darkgray 50%);
+
+	.reveal & h2{
+		color: #fff;
+		text-shadow: 0 0 3px #000;
+	}
+}
+
+.reveal .special h1, .reveal .special h2{
+	color: #fff;
+	line-height: 60vh;
+}
+
+.showcase{
+	background-color: var(--bg, pink);
+}
+li.showcase, span.showcase{
+	padding-right: 24px;
+	padding-left: 24px;
+	margin: 12px 0;
+	display: inline-block;
+}
+
+$headingTextTransform: none;
+
+.long-ul{
+	min-width: 300px;
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

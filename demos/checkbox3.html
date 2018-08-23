@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Focus</title>
+	<meta name="author" content="Here goes your name, you beautiful code-maker">
+
+	<link href="demo.css" rel="stylesheet">
+	<script src="prefixfree.min.js"></script>
+	
+</head>
+<body>
+
+	
+	<section class="live demo slide example">
+			<textarea class="shape-snippet left col check2" spellcheck="false" tabindex="0">
+.check:focus, textarea:focus{
+	outline: 4px dashed skyblue;
+}
+			</textarea>
+			<div class="flota col">
+				<div class="checks">
+					<!--
+						Tab index should be 0 here, 1 is only for demo purpose (the textarea get selected first if it's 0 because of CSS)
+					-->
+					<span class="check check1 check2" id="check" tabindex="1"></span>
+				</div>
+			</div>
+	</section>
+
+	<script>
+		check.addEventListener(
+			"click",
+			function (){
+				this.classList.toggle("check-active");
+			}
+		);
+	</script>
+
+
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/incrementable.js"></script>
+<script src="for-demos.js"></script>
+
+	
+</body>
+</html>
