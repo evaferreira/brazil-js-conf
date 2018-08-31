@@ -1,10 +1,9 @@
 // General JS for the talk that doesn't fit in separate files
 
 document.addEventListener('DOMContentLoaded', function() {
-	var textareas = document.querySelectorAll('.shape-snippet');
+	const textareas = document.querySelectorAll('.shape-snippet');
 
-	for(var i=0, len = textareas.length; i<len; i++) {
-		var textarea = textareas[i];
+	for (const textarea of textareas) {
 		textarea.setAttribute('wrap', 'off');
 
 		new CSSSnippet(textarea);
