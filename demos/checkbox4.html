@@ -16,7 +16,7 @@
 	<section class="live demo slide example">
 			<textarea class="shape-snippet left col check2" spellcheck="false" tabindex="0">
 function spaceKey(event) {
-    if (event.keyCode == 32 || event.keyCode == 13) {
+    if (event.key === " " || event.key === "Enter") {
         check.classList.toggle("check-active");
     }
 }
@@ -36,7 +36,7 @@ check.addEventListener(
 
 	<script>
 		function spaceKey(event) {
-			if (event.keyCode == 32 || event.keyCode == 13) {
+			if (event.key === " " || event.key === "Enter") {
 				check.classList.toggle("check-active");
 			}
 		}
