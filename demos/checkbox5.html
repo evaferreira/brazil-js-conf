@@ -15,7 +15,7 @@
 
 	<section class="live demo slide example">
 			<textarea class="shape-snippet left col check2" spellcheck="false" tabindex="0">
-function toggleCheckbox(e) {
+function toggleCheckbox(event) {
     if (check.getAttribute("aria-checked") === "false") {
         check.setAttribute("aria-checked", "true");
     } else {
@@ -32,7 +32,7 @@ function toggleCheckbox(e) {
 	</section>
 
 	<script>
-		function toggleCheckbox(e) {
+		function toggleCheckbox(event) {
 			if (check.getAttribute("aria-checked") === "false") {
 				check.setAttribute("aria-checked", "true");
 			} else {
@@ -41,17 +41,17 @@ function toggleCheckbox(e) {
         }
 		check.addEventListener(
 			"keydown",
-			function (ev){
-            	if (ev.keyCode == 32 || ev.keyCode == 13) {
-					toggleCheckbox(ev);
+			function (event) {
+				if (event.keyCode == 32 || event.keyCode == 13) {
+					toggleCheckbox(event);
 				}
 			}
 		);
 
 		check.addEventListener(
 			"click",
-			function (ev){
-				toggleCheckbox(ev);
+			function (event) {
+				toggleCheckbox(event);
 			}
 		);
 	</script>
