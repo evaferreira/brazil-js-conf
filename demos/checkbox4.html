@@ -2,28 +2,28 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Activate with spacebar</title>
 	<meta name="author" content="Here goes your name, you beautiful code-maker">
 
 	<link href="demo.css" rel="stylesheet">
 	<script src="prefixfree.min.js"></script>
-	
+
 </head>
 <body>
 
-	
+
 	<section class="live demo slide example">
 			<textarea class="shape-snippet left col check2" spellcheck="false" tabindex="0">
-function spaceKey(e) {
-    if (e.keyCode == 32 || e.keyCode == 13) {
+function spaceKey(event) {
+    if (event.key === " " || event.key === "Enter") {
         check.classList.toggle("check-active");
     }
 }
 
 check.addEventListener(
-    "keydown", function (ev){
-        spaceKey(ev);
+    "keydown", function (event) {
+        spaceKey(event);
     }
 );
 			</textarea>
@@ -35,21 +35,21 @@ check.addEventListener(
 	</section>
 
 	<script>
-		function spaceKey(e) {
-            if (e.keyCode == 32 || e.keyCode == 13) {
+		function spaceKey(event) {
+			if (event.key === " " || event.key === "Enter") {
 				check.classList.toggle("check-active");
-            }
-        }
+			}
+		}
 		check.addEventListener(
 			"keydown",
-			function (ev){
-				spaceKey(ev);
+			function (event) {
+				spaceKey(event);
 			}
 		);
 
 		check.addEventListener(
 			"click",
-			function (){
+			function () {
 				this.classList.toggle("check-active");
 			}
 		);
@@ -62,6 +62,6 @@ check.addEventListener(
 <script src="plugins/incrementable.js"></script>
 <script src="for-demos.js"></script>
 
-	
+
 </body>
 </html>
